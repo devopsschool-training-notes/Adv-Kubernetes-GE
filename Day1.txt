@@ -61,6 +61,9 @@ kubeadm join 192.168.1.7:6443 --token f1at1j.2m2jtuhw6m76dyed \
         --discovery-token-ca-cert-hash sha256:d73cb5f8923bc16c8f9975c4ea3bd84cca408c1b80eb238a68d2fa5f0a460a21
 
 
+Networking
+====================
+https://projectcalico.docs.tigera.io/getting-started/kubernetes/quickstart
 
 Nagesh
 3.110.107.153
