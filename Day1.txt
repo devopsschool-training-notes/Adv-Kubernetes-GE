@@ -123,10 +123,70 @@ Venkatesh Babu Kothakota
 
 13.126.142.123
 52.66.243.189
+===================================================================
+=====================================================================
+Authentication in Kubernetes
+------------------------------
+How to login kubernetes?
+
+Certificate	- HUMAN
+Token	- NODE BOOTSTRAPPING
+=============================
+How kubectl authenticate with API Server?
+----------------------------------------
+
+kubectl 
+		config
+			yaml
+		~/.kube/config
+		./kube/config
+		ENV	
+
+		Clustor(s)
+				c1 - Address of API SERVER
+				c2 - Address of API SERVER
+
+		User(s)
+				user1 - pvt key+cert
+				user2 
+
+		Context(s)
+				con1 - c1+user2
+				con2 - c2+user1
+		curr-context
+				con2
+=================================================================
+	
 
 
-
-
+ 58  clear
+   59  ps -eaf
+   60  clear
+   61  more $HOME/.kube/config
+   62  kubectl config view
+   63  clear
+   64  cd
+   65  ls
+   66  openssl genrsa -out employee.key 2048
+   67  ls
+   68  openssl req -new -key employee.key -out employee.csr -subj "/CN=employee/O=bitnami"
+   69  ls
+   70  openssl x509 -req -in employee.csr -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -out employee.crt -days 500
+   71  clear
+   72  ls
+   73  pwd
+   74  kubectl config set-credentials employee --client-certificate=/root/employee.crt  --client-key=/root/employee.key
+   75  kubectl config view
+   76  clear
+   77  kubectl config set-context employee-context --cluster=kubernetes --namespace=office --user=employee
+   78  kubectl config view
+   79  clear
+   80  kubectl config view
+   81  clear
+   82  kubectl create namespace office
+   83  kubectl --context=employee-context get pods
+   84  history
+https://www.devopsschool.com/blog/understanding-authentication-authorization-in-kubernetes/
 
 
 
