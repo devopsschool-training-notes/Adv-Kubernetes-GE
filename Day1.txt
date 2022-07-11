@@ -1,0 +1,144 @@
+Start - 9 AM IST
+End - 5 PM IST
+-----------------------
+Lunch - 1 PM - 2 PM IST
+-----------------------
+BREAK -
+		11 AM - 15mins
+		3:30 PM - 15mins
+----------------------------
+Lab - INFRA ON AWS | Laptop
+====================================
+Advance K8 -> Essential
+====================================
+
+
+
+
+
+When POD is in RUNNING State?
+=============================
+
+
+PS					VM					Container			POD
+-----------------------------------------------------------------------
+AS long as			AS long as			AS long as			As long as all cont of pod is runn			
+PID 1 is running		PID 1 is running		PID 1 is running
+
+										CMD + Entrypoint
+										
+========================================================================================
+1 MASTER		192.168.1.7
+2 WORKER
+----------------------
+	- Calico		(L3)
+	- Flannel	(Overlay)
+
+---------------------------------
+https://www.devopsschool.com/blog/setting-up-kubernetes-clusters-using-kubeadm-manual-way-in-rhel-7-centos7/
+
+[addons] Applied essential addon: kube-proxy
+
+Your Kubernetes control-plane has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 192.168.1.7:6443 --token f1at1j.2m2jtuhw6m76dyed \
+        --discovery-token-ca-cert-hash sha256:d73cb5f8923bc16c8f9975c4ea3bd84cca408c1b80eb238a68d2fa5f0a460a21
+
+
+
+Nagesh
+3.110.107.153
+13.127.224.201
+
+Dhiman Chakraborty
+43.204.130.40
+13.233.159.77
+
+Dinesh Selvaraj
+15.206.203.195	
+15.207.54.231
+
+Keerthana Venkatesh
+3.108.219.42
+13.233.53.221
+
+Deepak Katoch
+3.110.207.110
+3.110.90.27
+
+Sateesh Kumar
+15.207.221.255
+43.204.228.229
+
+Srinidhi Hiriyannaiah
+3.110.163.9
+65.2.63.115
+
+Sanketh RS
+3.110.154.162
+3.109.200.153
+
+Sunil Bondalakunta
+13.233.155.210
+43.204.228.109
+
+Ezhilarasan Rajendiran
+35.154.33.64
+65.0.6.6
+
+Harshit Shrivastava
+43.204.111.86
+15.207.55.206
+
+Srinivas AR
+3.109.55.148
+13.233.144.85
+
+Nithin Gowda B N
+15.207.223.241
+43.204.114.172
+
+Venkatesh Babu Kothakota
+65.2.6.137
+3.109.121.49
+
+13.126.142.123
+52.66.243.189
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
