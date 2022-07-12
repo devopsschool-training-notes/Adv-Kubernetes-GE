@@ -1,0 +1,132 @@
+kubectl api-resources --verbs=list --namespaced -o name \
+  | xargs -n 1 kubectl get --show-kind --ignore-not-found  -n raju
+
+
+
+Each Namespace
+=============================
+1 Service Account
+
+1 Config Maps 	=== cert + pvt
+
+1 Secrets		=== token
+
+Namespace
+------------------
+POD
+	---------------> Kubelet --> API SERVER
+
+   11  kubectl get nodes
+   12  clear
+   13  ls
+   14  kubeadm -h
+   15  clear
+   16  ls
+   17  kubeadm token -h
+   18  kubeadm token list
+   19  kubeadm token generate
+   20  kubeadm token list
+   21  kubeadm token create
+   22  kubeadm token list
+   23  clear
+   24  kubectl get ns
+   25  kubectl get ns office
+   26  kubectl get cm -n=office
+   27  kubectl describe cm kube-root-ca.crt -n=office
+   28  clear
+   29  kubectl get secrets -n=office
+   30  kubectl describe secrets default-token-z4mf2 -n=office
+   31  clear
+   32  kubectl get sa -n=office
+   33  kubectl get all -n=office
+   34  kubectl api-resources --verbs=list --namespaced -o name   | xargs -n 1 kubectl get --show-kind --ignore-not-found  -n office
+   35  clear
+   36  kubectl create ns raju
+   37  kubectl api-resources --verbs=list --namespaced -o name   | xargs -n 1 kubectl get --show-kind --ignore-not-found  -n raju
+   38  kubectl get roles -n=raju
+   39  kubeadm token create -h
+   40  clear
+   41  ls
+   42  kubectl get sa -n=raju
+   43  kubectl get clustorroles
+   44  kubectl get clusterroles
+   45  kubectl describe secrets default-token-z4mf2 -n=office
+
+====================================================================
+HUMAN --------> cert  + token
+
+SYSTEM ----> raju ns ==== POD
+
+==============================
+
+Discovering  --->		Discovering Server ---> nameserver
+DNS Concept	--->
+					 A Record means 
+					NS record
+
+
+Nagesh
+3.109.54.49
+3.7.252.175
+
+Dhiman Chakraborty
+3.110.123.79
+52.66.21.221
+
+Dinesh Selvaraj
+3.111.29.44
+52.66.246.13
+
+Keerthana Venkatesh
+15.207.248.190
+52.66.52.203
+
+Deepak Katoch
+3.7.69.231
+43.204.100.180
+
+Sateesh Kumar
+3.110.47.206
+3.109.122.45
+
+Srinidhi Hiriyannaiah
+65.0.110.183
+3.110.209.191
+
+Sanketh RS
+65.1.248.4
+52.66.246.87
+
+Sunil Bondalakunta
+65.2.83.46
+3.109.58.49
+
+Ezhilarasan Rajendiran
+43.204.100.33
+52.66.235.157
+
+Harshit Shrivastava
+65.2.142.23
+13.233.144.87
+
+Srinivas AR
+3.110.164.58
+13.127.21.131
+
+Nithin Gowda B N
+3.109.123.225
+65.0.99.142
+
+
+Venkatesh Babu Kothakota
+43.204.218.127
+43.204.108.221
+
+65.0.179.245
+3.108.215.123
+
+
+
+
+
+
