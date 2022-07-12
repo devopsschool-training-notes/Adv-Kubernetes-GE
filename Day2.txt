@@ -126,7 +126,8 @@ Venkatesh Babu Kothakota
 3.108.215.123
 
 
-
+LAB 
+https://www.devopsschool.com/blog/kubernetes-lab-investigating-networking-dns/
 
 
 
