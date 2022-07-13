@@ -1,0 +1,159 @@
+Earlier - Monitoring
+----------------------------
+			Past + Present ---Alerts
+
+What is Obserbability?
+=============================
+			Past + Present + Future
+
+SYSTEM 
+- LOGS							Elastic Stake | Grafana
+		App Logs
+		System Logs
+		Net Logs
+- Metrices						Prom*		| Grafana
+		Infra
+		Tools - Integrations
+- Traces						jaeger			| Grafana
+		APM
+		Syn*
+		RUM
+===================================
+				Store
+------------------------------------
+Search + Analysis + Alert + Dashboard
+
+LOGs
+-by Mahcine Data
+--------------------------------------------
+Server | Network | Apps | IOT | 
+
+time - loca - bytes - event code - source - dest
+----------------------------------------
+
+Logging -- Process to capture log + Search + Analysis + Alert + Dashboard
+D Tracing - -- Process to capture trace + Search + Analysis + Alert + Dashboard
+=====================================
+
+- ELK ---> Elastic Stake
+-------------------------------------------
+Collection --> Filtering --> Storage --> (Search + Analysis + Alert + Dashboard)
+---------------------------------------------------------------------------------
+Beats      --> Logstash  --> Elasticsearch <<<---------------- KIBANA 
+=================================================================================
+------------------------ 
+		flentd					LOKI							Grafana
+==================================================================================
+universal forward -----> heavy forwarder ---> splunkd --->  splunk head search
+----------------------------------------------------------------------------------
+datadogagent ----------> Datadog		----------------->	Datadog web
+------------------------------------------------------------------------------
+newrelicagent		----->    newrelic 	-------------------- newrelic
+		
+PODS
+NODE
+CP
+Service
+kubelet
+docker
+									Tracing
+========================================================================
+NewRelic
+Datadog
+Dynatrace
+AppDynamics
+Splunk APM
+Elastic APM
+Grafana APM
+-------------------------------
+Jeager
+
+
+
+You can log into the Jaeger Query UI here:
+
+  export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/instance=my-jaeger,app.kubernetes.io/component=query" -o jsonpath="{.items[0].metadata.name}")
+  echo http://127.0.0.1:8080/
+  kubectl port-forward --namespace default $POD_NAME 8080:16686
+
+Infra Monitoring
+=====================================================
+exporters (HTTP) <---------- Promethus <-------- Grafana
+exporters (HTTP) <---------- Graphite <-------- Grafana
+
+
+Promethus
+pvc -- pv (efs) 5TB
+----------------------
+				Prom - 
+
+Get the PushGateway URL by running these commands in the same shell:
+  export POD_NAME=$(kubectl get pods --namespace default -l "app=prometheus,component=pushgateway" -o jsonpath="{.items[0].metadata.name}")
+  kubectl --namespace default port-forward $POD_NAME 9091
+
+Nagesh
+13.235.77.64
+13.233.98.216
+
+Dhiman Chakraborty
+43.204.147.115
+13.233.23.104
+
+Dinesh Selvaraj
+13.126.231.29
+15.207.113.174
+
+Keerthana Venkatesh
+13.232.39.191
+3.7.68.180
+
+
+Deepak Katoch
+13.234.76.136
+13.232.163.240
+
+
+Sateesh Kumar
+3.110.118.53
+3.108.52.166
+
+Srinidhi Hiriyannaiah
+3.110.209.236
+43.204.220.80
+
+Sanketh RS
+15.206.212.77
+43.204.217.186
+
+Sunil Bondalakunta
+3.108.64.130
+43.204.109.208
+
+Ezhilarasan Rajendiran
+65.0.75.102
+52.66.238.217
+
+Harshit Shrivastava
+13.233.157.77
+3.110.221.249
+
+Srinivas AR
+65.0.21.195
+52.66.246.238
+
+Nithin Gowda B N
+3.110.176.105
+15.206.164.169
+
+Venkatesh Babu Kothakota
+3.110.175.120
+65.0.99.142
+
+
+13.127.239.253
+3.110.168.124
+
+Task 1 - Install ELK stake in k8 & Access it
+Task 2 - Install prom stake in k8 & Access it
+task 3 - Install Jaeger in k8  & Access it
+
